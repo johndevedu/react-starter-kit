@@ -217,10 +217,8 @@ app.use((err, req, res, next) => {
 const promise = models.sync().catch(err => console.error(err.stack));
 if (!module.hot) {
   promise.then(() => {
-    app.listen(process.env.PORT, () => {
-      console.info(
-        `The server is running at http://localhost:${process.env.PORT}/`,
-      );
+    app.listen(config.port, () => {
+      console.info(`The server is running at http://localhost:${config.port}/`);
     });
   });
 }

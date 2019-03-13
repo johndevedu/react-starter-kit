@@ -160,6 +160,7 @@
     "deploy": "babel-node tools/run deploy",
     "render": "babel-node tools/run render",
     "serve": "babel-node tools/run runServer",
-    "heroku-postbuild": "npm run build -- --release && node build/server.js"
+    "heroku-postbuild": "npm run build -- --release",
+    "start": "node build/server.js"
   }
 }
